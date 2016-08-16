@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     
-                    <div class="button-code">
+                    <div class="button-code code code">
                         <h3 class="result-title">Button</h3>
 
                         <div class="result-data"></div>
