@@ -1,0 +1,103 @@
+$body-font-family: 'Roboto', sans-serif;
+$body-font-size: 18px;
+$body-line-height: 1.5;
+$body-font-weight: 400;
+
+// Blue
+$blue-layout: ".blue";
+$body-blue-font-color: #888888;
+$body-blue-bg: #f2f1f3;
+$btn-blue-bg: #dc607a;
+// Gray
+$gray-layout: ".gray";
+$body-gray-font-color: #888888;
+$body-gray-bg: #ffffff;
+$btn-gray-bg: #19caaf;
+// Brown
+$brown-layout: ".brown";
+$body-brown-font-color: #58565a;
+$body-brown-bg: #4d4a4b;
+$btn-brown-bg: #ebdc6a;
+
+html {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    line-height: $body-line-height;
+    overflow-x: hidden;
+
+    &#{$blue-layout}  {
+        color: $body-blue-font-color;
+        background: $body-blue-bg;
+    }
+    &#{$gray-layout}  {
+        color: $body-gray-font-color;
+        background: $body-gray-bg;
+    }
+    &#{$brown-layout} {
+        color: $body-brown-font-color;
+        background: $body-brown-bg;
+    }
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.center { text-align: center; }
+
+button,
+input[type="button"],
+input[type="submit"],
+.btn {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    padding: 23px 50px;
+    text-decoration: none;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 9px 35px -7px rgba(0,0,0,0.47);
+    box-shadow: 0px 9px 35px -7px rgba(0,0,0,0.47);
+    transition: all .3s;
+    @include layout-color($btn-blue-bg, $btn-gray-bg, $btn-brown-bg, background);
+    @include layout-color(#ffffff, #ffffff, #343434, color);
+    &:hover { opacity: .8; }
+    @media screen and (max-width: $mobile) {
+        font-size: 22px;
+        padding: 17px 48px;
+    }
+}
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Free Ebooks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <!-- Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900,500,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="logo-mobile">
+                    <a href="#">
+                        <img src="images/logo-mobile.png" alt="">
+                    </a>
+                </div>
+                <div class="product">
+                    Affiliate <span>Tools</span>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <section class="section-form">
+                <div class="container">
+                    <div class="tool-form">
+                        <h1 class="title">Free Ebooks</h1>
+                        <form action="">
+                            <p>
+                                <input type="text" placeholder="Your Affiliate ID">
+                            </p>
+                            <p>
+                                <select class="cs-select cs-skin-elastic">
+                                    <option value="" disabled selected>Choose Ebook</option>
+                                    <option value="1">Name 123456</option>
+                                    <option value="2">Name 123456</option>
+                                    <option value="3">Name 123456</option>
+                                    <option value="4">Name 123456</option>
+                                </select>
+                            </p>
+                            <p>
+                                <select class="cs-select cs-skin-elastic">
+                                    <option value="" disabled selected>Choose Design</option>
+                                    <option value="1">Name 123456</option>
+                                    <option value="2">Name 123456</option>
+                                    <option value="3">Name 123456</option>
+                                    <option value="4">Name 123456</option>
+                                </select>
+                            </p>
+                            <button type="submit" class="btn btn-submit">GENERATE CODE</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-result">
+                <div class="container">
+                    <div class="result-content">
+                        <h3 class="result-title">Button</h3>
+                        <div class="result-data">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Ad aperiam asperiores atque distinctio ea est illo modi non
+                            numquam officia perferendis praesentium, quia quidem, quis
+                            quod repudiandae, saepe sequi veritatis.
+                        </div>
+                        <div class="result-controls">
+                            <button class="btn btn-result">Preview</button>
+                            <button class="btn btn-result">Copy Code</button>
+                        </div>
+                    </div>
+
+                    <div class="result-content">
+                        <h3 class="result-title">Button</h3>
+                        <div class="result-data">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Ad aperiam asperiores atque distinctio ea est illo modi non
+                            numquam officia perferendis praesentium, quia quidem, quis
+                            quod repudiandae, saepe sequi veritatis.
+                        </div>
+                        <div class="result-controls">
+                            <button class="btn btn-result">Preview</button>
+                            <button class="btn btn-result">Copy Code</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/vendor/classie.js"></script>
+    <script src="js/vendor/selectFx.js"></script>
+    <script>
+        (function() {
+            [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
+                new SelectFx(el);
+            } );
+        })();
+    </script>
+</body>
+</html>

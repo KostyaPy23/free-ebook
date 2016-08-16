@@ -1,0 +1,44 @@
+
+// Blue Layout
+$color: #888888;
+@if (#{"body"}) {
+    $color: #888888;
+} @else if(#{"body.gray"}) {
+    $color: #888888;
+} @else if(#{"body.brown"}) {
+    $color: red;
+}
+// Gray Layout
+
+
+
+// Brown Layout
+
+
+// Mixins
+@mixin layout-color($blue-layout, $gray-layout, $brown-layout, $type) {
+    @if ($type == "color") {
+        #{"body.blue"} & { color: $blue-layout; }
+        #{"body.gray"} & { color: $gray-layout; }
+        #{"body.brown"} & { color: $brown-layout; }
+    } @else if($type == "background"){
+        #{"body.blue"} & { background-color: $blue-layout; }
+        #{"body.gray"} & { background-color: $gray-layout; }
+        #{"body.brown"} & { background-color: $brown-layout; }
+    }
+}
+
+%clearfix {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Media Queries
+$tablet: 1200px;
+$mobile: 767px;

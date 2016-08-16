@@ -1,0 +1,159 @@
+.popup-window {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .85);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s;
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .table {
+        display: table;
+        height: 100%;
+        margin: 0 auto;
+        .table-cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    .popup-content {
+        position: relative;
+        background-color: transparent;
+        width: 970px;
+        text-align: center;
+        @media screen and (max-width: 767px) {
+           width: 100%;
+        }
+        .popup-logo img {
+            width: auto;
+            margin: 0 auto 50px;
+        }
+        .popup-text {
+            padding: 0 50px;
+            color: #fff;
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-size: 65px;
+            line-height: 1.3;
+            text-transform: uppercase;
+            position: relative;
+            @media screen and (max-width: 767px) {
+                font-size: 45px;
+                padding: 0 30px;
+            }
+            strong {
+                font-weight: 900;
+                display: block;
+            }
+            span {
+                margin-top: 40px;
+                display: block;
+                font-size: 35px;
+                text-transform: none;
+                @media screen and (max-width: 767px) {
+                    margin-top: 20px;
+                    font-size: 30px;
+                }
+            }
+            .icon-close {
+                display: block;
+                position: absolute;
+                width: 30px;
+                height: 28px;
+                top: -124px;
+                right: 0;
+                cursor: pointer;
+                background: url(../images/close-icon.png) 0 0;
+                &:hover { background: url(../images/close-icon.png) 0 28px; }
+                @media screen and (max-width: 769px) {
+                    right: 23px;
+                }
+            }
+        }
+
+        .social-buttons {
+            display: block;
+            list-style: none;
+            margin-top: 55px;
+            @media screen and (max-width: 767px) {
+                margin-top: 30px;
+            }
+            li {
+                position: relative;
+                display: inline-block;
+                margin: 0 30px;
+                font: 0/0 a;
+                width: 144px;
+                height: 144px;
+                border-radius: 50%;
+                background: red;
+                text-align: center;
+                cursor: pointer;
+                transition: all .35s;
+                button {
+                    background: transparent;
+                    position: absolute;
+                    padding: 0;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: inherit;
+                }
+                &:before {
+                    position: absolute;
+                    z-index: 5;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 144px;
+                    border-radius: inherit;
+                    color: #fff;
+                    font-family: "fontello";
+                }
+                &.facebook {
+                    background: #3b5998;
+                    &:before {
+                        content: '\f09a';
+                        font-size: 85px;
+                    }
+                    &:hover { background: #5872a7; }
+                }
+                &.google-plus {
+                    background: #dc4e41;
+                    &:before {
+                        content: '\f0d5';
+                        font-size: 75px;
+                    }
+                    &:hover { background: #e1685d; }
+                }
+                &.vk {
+                    background: #4d76a1;
+                    &:before {
+                        content: '\f189';
+                        font-size: 75px;
+                    }
+                    &:hover { background: #688aaf; }
+                }
+                @media screen and (max-width: 767px) {
+                    margin: 0 15px;
+                    width: 76px;
+                    height: 76px;
+                    &:first-child { margin-left: 0; }
+                    &:last-child { margin-right: 0; }
+                    &:before {
+                        line-height: 76px;
+                        font-size: 40px!important;
+                    }
+                }
+            }
+        }
+    }
+}
